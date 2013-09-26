@@ -1,0 +1,8 @@
+*.pyc
+.venv
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+Thumbs.db
+desktop.ini
