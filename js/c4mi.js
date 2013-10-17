@@ -14,7 +14,7 @@ if ( !window['hdcontrol'] ) {
 }
 
 //ask for type
-if ( window.confirm('what do u want? phone(Ok),box(Cancll)') ) {
+if ( window.confirm('what do u want? phone(Ok),other(Cancll)') ) {
 	cheat_type = 'phone'
 }else{
 	cheat_type = 'box'
