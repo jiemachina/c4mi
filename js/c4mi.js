@@ -14,16 +14,18 @@ if ( !window['hdcontrol'] ) {
 }
 
 //ask for type
-if ( window.confirm('what do u want? phone(Ok),other(Cancll)') ) {
+if ( window.confirm('what do u want? phone(Ok),other(Cancel)') ) {
 	cheat_type = 'phone'
 }else{
 	cheat_type = 'box'
 }
 
+//hook
 if (!window['cheat_hdcontrol']) {
 	cheat_hdcontrol = hdcontrol;
 }
 
+//rewrite callback
 hdcontrol = function(json){
 	//true hdcontrol need
 	isRollStatus = true;
@@ -51,7 +53,7 @@ hdcontrol = function(json){
 	});
 	if (json.status.allow) {
 		if (isPhone === true) {
-			isPhone === false;
+			//isPhone === false;
 			if (json.status.miphone.hdurl == null || json.status.miphone.hdurl == '') {
 				//window.location.reload();
 			}
@@ -59,7 +61,7 @@ hdcontrol = function(json){
 				location.href = 'http://t.hd.xiaomi.com/s/' + json.status.miphone.hdurl;
 			}
 		} else if (isBox === true) {
-			isBox === false;
+			//isBox === false;
 			if (json.status.mibox.hdurl == '' || json.status.mibox.hdurl == null) {
 				//window.location.reload();
 			}
